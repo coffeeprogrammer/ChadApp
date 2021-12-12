@@ -1,0 +1,7 @@
+<h2>Browse Movies</h2>
+
+<div class="TileContainer">
+    <app-movie-tile
+        *ngFor="let movie of movies; index as  i" [movie]="movie" >
+    </app-movie-tile>
+</div>

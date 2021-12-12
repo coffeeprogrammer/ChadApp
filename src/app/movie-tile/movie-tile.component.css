@@ -1,0 +1,26 @@
+
+
+#page {
+    display: grid;
+    /*height: 40px;*/
+    grid-template: "title title"
+                    "art controls"
+                    "art controls"
+
+
+  }
+/* change to ids */
+
+  .title {
+      grid-area: title;
+      text-align: center;
+  }
+
+  .art {
+      grid-area: art;
+  }
+
+  .controls {
+      grid-area: controls;
+  }
+  

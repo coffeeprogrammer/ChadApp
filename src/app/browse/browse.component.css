@@ -1,0 +1,66 @@
+h3 { text-align: center }
+
+.movietitle {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    /*border: solid 1px black;*/
+    top: 0px;
+    left: 0px;
+    height: 30px
+}
+
+.moviecoverart {
+
+    z-index: 2;
+    position: absolute;
+    /* height: -700px; */
+
+    /* border: solid 1px black; */
+    /* top: 0px; */
+    left: 10px;
+    bottom: 0px;
+
+
+}
+
+.TileContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20rem );
+    justify-content: space-between;
+    margin: 1rem;
+    
+}
+
+.moviecontrols {
+    border: solid 1px black;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 50px 1fr) 100px;
+    grid-gap: 5px;
+    box-sizing: border-box;
+    height: 200px;
+    width: 100%;
+    background-color: #8cffa0;
+    padding: 10px;
+  }
+
+
+  .centainer-1 {
+      display: flex;
+  }
+
+  .container-2 {
+      boarder:1px #ccc solid;
+      padding:10px
+
+    .box-1 {
+        flex:2;
+    }
+  }
