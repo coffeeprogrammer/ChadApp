@@ -10,6 +10,8 @@ import { NavComponentComponent } from './nav-component/nav-component.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -18,6 +20,8 @@ import { MatListModule } from '@angular/material/list';
 //import { SettingsComponent } from './settings/settings.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MovieTileComponent } from './movie-tile/movie-tile.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -29,19 +33,22 @@ import { MovieTileComponent } from './movie-tile/movie-tile.component';
     routingComponents,
 MovieTileComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    RouterModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        RouterModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+      MatInputModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

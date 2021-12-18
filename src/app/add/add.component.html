@@ -1,5 +1,90 @@
-<p>add works!</p>
+<h1>Add Movie</h1>
+<div>
+  <form novalidate
+        (ngSubmit)="saveAdd()"
+        [formGroup]="movieForm">
+    <div class="example-container">
 
-<br>
-<br>
-<a routerLink="/settings">Settings</a>
+      <mat-form-field>
+        <mat-label
+          for="movieTitle">Movie Title
+        </mat-label>
+        <input
+          id="movieTitle"
+          type="input"
+          matInput
+          formControlName="title"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label
+          for="movieYear">Year
+        </mat-label>
+        <input class="form-control"
+               id="movieYear"
+               matInput
+               type="input"
+               formControlName="year"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label
+          for="movieRating">Rating
+        </mat-label>
+        <input class="form-control"
+               id="movieRating"
+               matInput
+               type="input"
+               formControlName="rating"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label
+          for="movieWriter">Writer
+        </mat-label>
+        <input class="form-control"
+               id="movieWriter"
+               matInput
+               type="input"
+               formControlName="writer"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label
+          for="movieDirector">Director
+        </mat-label>
+        <input class="form-control"
+               id="movieDirector"
+               matInput
+               type="input"
+               formControlName="director"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label
+          for="movieDirector">Synopsis
+        </mat-label>
+        <textarea
+          matInput
+          id="movieSynopsis"
+          formControlName="synopsis">
+        </textarea>
+      </mat-form-field>
+    </div>
+
+
+    <div class="example-button-row">
+
+      <button mat-raised-button color="primary">Add this movie</button>
+
+    </div>
+
+
+
+
+  </form>
+</div>
