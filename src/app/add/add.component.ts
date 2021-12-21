@@ -1,5 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn, FormArray } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  FormControl,
+  Validators,
+  AbstractControl,
+  ValidatorFn,
+  FormArray,
+  FormGroupDirective
+} from '@angular/forms';
+import {MovieModel} from "../data/movie-model";
+
+import { Movie } from '../services/movie.service'
 
 @Component({
   selector: 'app-add',
@@ -9,7 +21,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn, FormA
 export class AddComponent implements OnInit {
   movieForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private movie: Movie) { }
 
   ngOnInit(): void {
     this.movieForm = this.fb.group({
@@ -25,6 +37,14 @@ export class AddComponent implements OnInit {
 
   saveAdd(): void {
     console.log("save add!!!");
+    let mm: MovieModel = this.movieForm.value;
+
+    console.log(mm);
+    mm.coverArtFn = "nothing.jpg";
+    this.movie.saveMovie(mm).subscribe((result)=>
+    {
+      console.log(result);
+    });
 
   }
 

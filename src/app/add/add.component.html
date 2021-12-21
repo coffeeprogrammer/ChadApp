@@ -1,6 +1,7 @@
 <h1>Add Movie</h1>
 <div>
   <form novalidate
+        #userPost="ngForm"
         (ngSubmit)="saveAdd()"
         [formGroup]="movieForm">
     <div class="example-container">
@@ -24,7 +25,7 @@
         <input class="form-control"
                id="movieYear"
                matInput
-               type="input"
+               type="number"
                formControlName="year"
         />
       </mat-form-field>
@@ -36,7 +37,7 @@
         <input class="form-control"
                id="movieRating"
                matInput
-               type="input"
+               type="number"
                formControlName="rating"
         />
       </mat-form-field>

@@ -21,7 +21,15 @@ loadMovies(): Observable<MovieModel[]> {
       }));
   }
 
+saveMovie(movie: MovieModel): Observable<MovieModel> {
+  return this.sendRequest<MovieModel>("POST", "http://localhost:13250/api/movies", movie);
 
+}
 
-
+private sendRequest<T>(verb: string, url: string, body?: MovieModel)
+  : Observable<T> {
+  return this.http.request<T>(verb, url, {
+    body: body
+  });
+  }
 }
