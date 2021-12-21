@@ -1,13 +1,17 @@
 <div id="page">
-
-    <div class="title"><h3>{{ movie.title }}</h3></div>
-<div class="art"><img src="../assets/images/StarWars_ANewHope_1977ep4.jpg"
-     width="80" height="140"/></div>
-<div class="controls">
-    Year Released: {{movie.year}} <br>
-    Writer: {{movie.writer}}<br>
-
+    <div id="title"><h3>{{ movie.title }}</h3></div>
+  <div class="art"><img src="../assets/images/{{movie.coverArtFn}}"
+                        width="80" height="140"/></div>
+<div id="controls">
+    Year: {{movie.year}} <br>
+  Rating: {{movie.rating}} out of 10 <br>
+    Writer: {{movie.writer}} <br>
+  Director: {{movie.director}} <br>
+  <a href="#">Play</a> <br>
+  <a href="#">Preview</a> <br>
+  <a href="#">Edit</a> <br>
 </div>
-
-
+  <div id="synopsis">
+    {{movie.synopsis}}
+  </div>
 </div>

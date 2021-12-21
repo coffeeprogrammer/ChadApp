@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponentComponent } from './nav-component/nav-component.component';
+
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,11 +22,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MovieTileComponent } from './movie-tile/movie-tile.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {HttpClientModule} from "@angular/common/http";
+import {Movie} from "./services/movie.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponentComponent,
 //    BrowseComponent,
  //   AddComponent,
  //   SettingsComponent,
@@ -39,6 +40,7 @@ MovieTileComponent
         BrowserAnimationsModule,
         LayoutModule,
         RouterModule,
+      HttpClientModule,
         MatToolbarModule,
         MatButtonModule,
         MatSidenavModule,
@@ -49,7 +51,9 @@ MovieTileComponent
         MatFormFieldModule,
       MatInputModule
     ],
-  providers: [],
+  providers: [
+    Movie
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

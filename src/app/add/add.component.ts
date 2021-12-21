@@ -13,7 +13,7 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieForm = this.fb.group({
-      movieTitle: "",
+      title: "",
       year: null,
       rating: null,
       writer: "",

@@ -5,4 +5,5 @@ export type MovieModel = {
     writer: string;
     director: string;
     synopsis: string;
+    coverArtFn: string;
 }

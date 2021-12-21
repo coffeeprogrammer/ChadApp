@@ -1,26 +1,32 @@
 
-
 #page {
     display: grid;
     /*height: 40px;*/
-    grid-template: "title title"
-                    "art controls"
-                    "art controls"
-
-
+    grid-template:
+      "title title"
+      "art controls"
+      "art controls"
+      "art controls"
+      "synnopsis synnopsis";
+  grid-template-columns: 100px auto;
   }
-/* change to ids */
-
-  .title {
+  #title {
       grid-area: title;
       text-align: center;
   }
+  #art {
+    grid-area: art;
+    margin: 10px;
 
-  .art {
-      grid-area: art;
   }
 
-  .controls {
+  #controls {
       grid-area: controls;
+    text-after-overflow: left;
+
   }
-  
+
+#synopsis {
+  grid-area: synnopsis;
+  font-size: smaller;
+}
